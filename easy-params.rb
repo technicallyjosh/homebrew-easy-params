@@ -2,16 +2,16 @@
 class EasyParams < Formula
   desc "Opinionated CLI for easy management of SSM Parameters."
   homepage "https://github.com/technicallyjosh/easy-params"
-  version "0.5.0"
+  version "0.5.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.5.0/easy-params_0.5.0_Darwin_x86_64.tar.gz"
-    sha256 "512516ba8967751be0dea92a8548d41ece56442d7a1ccbc45723588d5cd29519"
+    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.5.1/easy-params_0.5.1_Darwin_x86_64.tar.gz"
+    sha256 "74856f696d47d3b842dde8c30862fbd59f6a5b8896588f70962d18cde629a0d9"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/technicallyjosh/easy-params/releases/download/v0.5.0/easy-params_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "bd978039dd0b216c93847245f3dd54e91175dabc37c57a673d69e452fa84ed32"
+      url "https://github.com/technicallyjosh/easy-params/releases/download/v0.5.1/easy-params_0.5.1_Linux_x86_64.tar.gz"
+      sha256 "34aba87408877fe8fe73d9062594a353f7c6ae5541ea3d79b28896cc1cd6e163"
     end
   end
 
