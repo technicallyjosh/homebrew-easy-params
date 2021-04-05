@@ -5,24 +5,24 @@
 class EasyParams < Formula
   desc "Opinionated CLI for easy management of SSM Parameters."
   homepage "https://github.com/technicallyjosh/easy-params"
-  version "0.6.7"
+  version "0.6.8"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.7/easy-params_0.6.7_Darwin_x86_64.tar.gz"
-    sha256 "53252784c55f3d23a41201d56a5b1e88f53a2c6008e7d998f5d97a5dbafaa2ae"
+    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Darwin_x86_64.tar.gz"
+    sha256 "1287b646810edbbfe7cdfb3c5f4042627e0bd8c98b36942f6f9be36461291644"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.7/easy-params_0.6.7_Darwin_arm64.tar.gz"
-    sha256 "67863130faf2bf21d6fc5f09bba9c8e2803c5f7464f6a1e37cfd8058d8d2627f"
+    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Darwin_arm64.tar.gz"
+    sha256 "73e688c7a05e6a1844c9559dc470b7ea8b19c2a7b108a6f418dbe5c0f3fa44fa"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.7/easy-params_0.6.7_Linux_x86_64.tar.gz"
-    sha256 "577a2560430403c322ee15af7b6b54d739dd86f91589e73de5d2d35393027c9e"
+    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Linux_x86_64.tar.gz"
+    sha256 "8f97f31322d5778c28682b152c80d741fd85225235422973271be2484bf6aa39"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.7/easy-params_0.6.7_Linux_arm64.tar.gz"
-    sha256 "32e054f5e76b5d24ed9ea587d3673be6720f2432bc1f8da12c6758b396344ff4"
+    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Linux_arm64.tar.gz"
+    sha256 "c62e2e6a4f7fdc41daa435cfda24d335286d9957260789141c4fe62962432d65"
   end
 
   def install
