@@ -6,7 +6,6 @@ class EasyParams < Formula
   desc "Opinionated CLI for easy management of SSM Parameters."
   homepage "https://github.com/technicallyjosh/easy-params"
   version "0.6.8"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Darwin_x86_64.tar.gz"
