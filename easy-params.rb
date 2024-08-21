@@ -5,27 +5,48 @@
 class EasyParams < Formula
   desc "Opinionated CLI for easy management of SSM Parameters."
   homepage "https://github.com/technicallyjosh/easy-params"
-  version "0.6.8"
+  version "0.7.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Darwin_x86_64.tar.gz"
-    sha256 "1287b646810edbbfe7cdfb3c5f4042627e0bd8c98b36942f6f9be36461291644"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Darwin_arm64.tar.gz"
-    sha256 "73e688c7a05e6a1844c9559dc470b7ea8b19c2a7b108a6f418dbe5c0f3fa44fa"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Linux_x86_64.tar.gz"
-    sha256 "8f97f31322d5778c28682b152c80d741fd85225235422973271be2484bf6aa39"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/technicallyjosh/easy-params/releases/download/v0.6.8/easy-params_0.6.8_Linux_arm64.tar.gz"
-    sha256 "c62e2e6a4f7fdc41daa435cfda24d335286d9957260789141c4fe62962432d65"
+  on_macos do
+    on_intel do
+      url "https://github.com/technicallyjosh/easy-params/releases/download/v0.7.0/easy-params_0.7.0_darwin_amd64.tar.gz"
+      sha256 "952c393ac7cb967023fb97692cfef25f923646009b3c01392506378d425f3aa8"
+
+      def install
+        bin.install "easy-params"
+      end
+    end
+    on_arm do
+      url "https://github.com/technicallyjosh/easy-params/releases/download/v0.7.0/easy-params_0.7.0_darwin_arm64.tar.gz"
+      sha256 "2d8dbcff0ed1c2768598936e730cd4d98ee4fd5d3a3976f447bbbba35f37faa4"
+
+      def install
+        bin.install "easy-params"
+      end
+    end
   end
 
-  def install
-    bin.install "easy-params"
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/technicallyjosh/easy-params/releases/download/v0.7.0/easy-params_0.7.0_linux_amd64.tar.gz"
+        sha256 "991cc02b6d9266a210c8a71707224d6bd259f9ce3895842a9b74aa948aea48d9"
+
+        def install
+          bin.install "easy-params"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/technicallyjosh/easy-params/releases/download/v0.7.0/easy-params_0.7.0_linux_arm64.tar.gz"
+        sha256 "626bd846d0248877de3ea84c840cee5ab46f0b8851ea13111c6d2401050eac78"
+
+        def install
+          bin.install "easy-params"
+        end
+      end
+    end
   end
 
   test do
